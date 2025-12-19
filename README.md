@@ -1,3 +1,5 @@
+
+link repositorio=https://github.com/Horgito51/ConsultorioDental.git
 # 🩺 Módulo de Consultas - Laravel
 
 Este proyecto implementa un módulo de **gestión de consultas** desarrollado en **Laravel**, siguiendo el patrón **MVC (Modelo–Vista–Controlador)**.

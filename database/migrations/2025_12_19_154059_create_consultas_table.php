@@ -19,6 +19,7 @@ return new class extends Migration
             $table->enum('estado',['pendiente','atendido','cancelado'])->default('pendiente');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

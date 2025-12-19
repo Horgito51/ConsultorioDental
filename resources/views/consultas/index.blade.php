@@ -10,7 +10,7 @@
                         <th>Paciente</th>
                         <th>Teléfono</th>
                         <th>Fecha</th>
-                        <th>Fecha agenda</th>
+                        <th>Fecha Creación/Modificación</th>
                         <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
@@ -22,7 +22,7 @@
                             <td>{{ $consulta->paciente }}</td>
                             <td>{{ $consulta->telefono }}</td>
                             <td>{{ $consulta->fecha }}</td>
-                            <td>{{ $consulta->created_at->format('Y-m-d H:i') }}</td>
+                            <td>{{ $consulta->updated_at->format('Y-m-d H:i') }}</td>
                             <td>{{ $consulta->estado }}</td>
                             <td>
                                 <a href="{{ route('consultas.edit', $consulta->id) }}"

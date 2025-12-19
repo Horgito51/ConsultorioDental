@@ -64,7 +64,7 @@ class ConsultaController extends Controller
      */
     public function destroy(Consulta $consulta)
     {
-        $consulta->update(['is_active'=>false]);
+        $consulta->delete();
         return redirect()->route('consultas.index')->with('success','consulta eliminada');
     }
 }
