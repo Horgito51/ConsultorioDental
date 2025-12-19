@@ -52,17 +52,18 @@ La migración define la estructura de la tabla `consultas`.
 📁 Ubicación:
 
 
-### Campos de la tabla:
+### Campos de la tabla `consultas`
 
-| Campo | Tipo | Descripción |
-|------|------|-------------|
-| id | bigint | Identificador |
-| paciente | string(50) | Nombre del paciente |
-| telefono | string(10) | Teléfono |
-| fecha | date | Fecha de la consulta |
-| estado | enum | pendiente / atendido / cancelado |
-| is_active | boolean | Control de borrado lógico |
-| timestamps | timestamp | Fechas de registro |
+| Campo       | Tipo        | Descripción |
+|------------|------------|-------------|
+| id         | bigint     | Identificador único de la consulta, autoincremental. |
+| paciente   | string(50) | **Campo obligatorio (required)**. Almacena el nombre del paciente. |
+| telefono   | string(10) | **Campo obligatorio (required)**. Guarda el número telefónico del paciente. |
+| fecha      | date       | **Campo obligatorio (required)**. Representa la fecha programada de la consulta. |
+| estado     | enum       | Define el estado de la consulta. Solo admite los valores **pendiente**, **atendido** o **cancelado**. Por defecto se asigna `pendiente`. |
+| is_active  | boolean    | Controla el **borrado lógico**. `true` indica que el registro está activo, `false` indica que fue eliminado lógicamente. |
+| timestamps | timestamp  | Registra automáticamente la fecha y hora de creación y actualización del registro. |
+
 
 ---
 
